@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	background-color: pink;
+	font-family: 'Poppins', sans-serif;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 1200px;
+
+}
+button {
+	font-family: 'Poppins', sans-serif;
+	font-size: 24px;
+	padding: 5px;
+	max-width: 100%;
+	font-family: "Noto Sans JP";
+	text-align: center;
+	color: #fff;
+	background-color: #540833;
+	border: 2px solid #540833;
+	border-radius: 4px;
+	transition: color .3s, background-color .3s;
+	cursor: pointer;
+}
+button:hover, button:active {
+  	color: #24272e;
+  	background-color: #fff;
+}
