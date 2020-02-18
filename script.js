@@ -1,13 +1,13 @@
 'use strict';
 
-var prefix = "https://cors-anywhere.herokuapp.com/";
+//var prefix = "https://cors-anywhere.herokuapp.com/";
 var tweetLink = "https://twitter.com/intent/tweet?text=";
-var quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+var quoteUrl = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand&_=1582047457083";
 
 // Get a quote function
 
 function getQuote() {
-    fetch(prefix + quoteUrl, { cache: "no-store" })
+    fetch(quoteUrl, { cache: "no-store" })
         .then(function(resp) {
             return resp.json();
         })
