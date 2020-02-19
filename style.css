@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 body {
-	background-color: pink;
+	background-color: #76C2EB;
 	font-family: 'Poppins', sans-serif;
 	width: 100%;
 }
@@ -27,7 +27,7 @@ a {
 	color: white;
 }
 button {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif !important;
 	font-size: 24px;
 	padding: 5px;
 	margin: 20px;
@@ -35,13 +35,14 @@ button {
 	font-family: "Noto Sans JP";
 	text-align: center;
 	color: #fff;
-	background-color: #540833;
-	border: 2px solid #540833;
+	background-color: #102937;
+	border: 2px solid #102937;
 	border-radius: 4px;
 	transition: color .3s, background-color .3s;
 	cursor: pointer;
 }
 button:hover, button:active, a:hover, i:hover {
-  	color: #24272e;
-  	background-color: #fff;
+  	color: #fff;
+  	background-color: #447D9C;
+  	transition: color .3s, background-color .3s;
 }
