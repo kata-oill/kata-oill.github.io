@@ -1,13 +1,12 @@
 'use strict';
 
-//var prefix = "https://cors-anywhere.herokuapp.com/";
 var tweetLink = "https://twitter.com/intent/tweet?text=";
-var quoteUrl = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand&_=1582047457083";
+var quoteUrl = "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand&_=";
 
 // Get a quote function
 
 function getQuote() {
-    fetch(quoteUrl, { cache: "no-store" })
+    fetch(quoteUrl + Date.now(), { cache: "no-store" })
         .then(function(resp) {
             return resp.json();
         })
@@ -20,9 +19,9 @@ function createTweet(input) {
     var data = input[0];
 
     var dataElement = document.createElement('div');
-    dataElement.innerHTML = data.content;
+    dataElement.innerHTML = data.content.rendered;
     var quoteText = dataElement.innerText.trim();
-    var quoteAuthor = data.title;
+    var quoteAuthor = data.title.rendered;
 
     if (!quoteAuthor.length) {
         quoteAuthor = "Unknown author";
